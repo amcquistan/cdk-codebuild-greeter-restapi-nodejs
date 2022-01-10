@@ -1,10 +1,12 @@
-# Welcome to your CDK TypeScript project!
+# Reference Project: AWS CDK and CodeBuild for NodeJS Greeter REST API
 
-This is a blank project for TypeScript development with CDK.
+This is a learning reference project for using AWS Cloud Development Kit v2 (CDK) in conjunction with AWS CodeBuild for building and testing a NodeJS based Greeter REST API.
+ 
+## Boilerplate from CDK Init
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-## Useful commands
+#### Useful commands
 
  * `npm run build`   compile typescript to js
  * `npm run watch`   watch for changes and compile
