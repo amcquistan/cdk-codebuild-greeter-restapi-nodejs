@@ -10,10 +10,10 @@ describe("Test /greet", () => {
     expect(response.body).toEqual({ greeting: 'Hello World' })
   });
 
-  test("Query param 'Adam' should 'Hello Adam'", async () => {
-    const response = await request(app).get("/greet?suffix=Adam")
+  test("Query param 'Friend' should return 'Hello Friend'", async () => {
+    const response = await request(app).get("/greet?suffix=Friend")
     expect(response.statusCode).toBe(200);
-    expect(response.body).toEqual({ greeting: 'Hello Adam' })
+    expect(response.body).toEqual({ greeting: 'Hello Friend' })
   });
 });
 

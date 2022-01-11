@@ -5,16 +5,14 @@ phases:
     runtime-versions:
       nodejs: 12.x
     commands:
+      - cd src/greeter-api
       - npm install
   build:
     commands:
-      - echo Build started on `date`
-      - npm run test
-  post_build:
-    commands:
-      - echo Build completed on `date`
+      - npm test
+
 artifacts:
   files:
-    - src/**/*
-    - appspec.yml
-  discard-paths: yes
+    - './**/*'
+  base-directory: src
+  name: 'greeter-api'
