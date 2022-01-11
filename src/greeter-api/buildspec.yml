@@ -15,6 +15,6 @@ artifacts:
     - '**/*'
   discard-paths: yes
   exclude-paths:
-    - node_modules/
+    - node_modules/*
   base-directory: src
   s3-prefix: greeter-api
