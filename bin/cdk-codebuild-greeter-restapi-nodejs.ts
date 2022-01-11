@@ -5,9 +5,10 @@ import { CdkCodebuildStack } from "../lib/cdk-codebuild-stack";
 
 
 const env = {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION
+  account: process.env.AWS_ACCOUNT,
+  region: process.env.AWS_REGION
 };
+console.log(JSON.stringify(env));
 
 const app = new cdk.App();
 
