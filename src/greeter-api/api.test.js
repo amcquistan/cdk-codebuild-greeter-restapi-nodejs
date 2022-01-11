@@ -7,7 +7,7 @@ describe("Test /greet", () => {
   test("Default should return 'Hello World'", async () => {
     const response = await request(app).get("/greet")
     expect(response.statusCode).toBe(200);
-    expect(response.body).toEqual({ greeting: 'Hello World - Broken' })
+    expect(response.body).toEqual({ greeting: 'Hello World' })
   });
 
   test("Query param 'Friend' should return 'Hello Friend'", async () => {
