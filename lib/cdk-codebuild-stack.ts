@@ -17,14 +17,12 @@ export class CdkCodebuildStack extends cdk.Stack {
     const githubSource = codebuild.Source.gitHub({
       owner: 'amcquistan',
       repo: 'cdk-codebuild-greeter-restapi-nodejs',
+      branchOrRef: 'main',
       webhook: true,
       webhookFilters: [
-        codebuild.FilterGroup.inEventOf(codebuild.EventAction.PULL_REQUEST_CREATED)
-          .andBranchIs('main'),
-        codebuild.FilterGroup.inEventOf(codebuild.EventAction.PULL_REQUEST_UPDATED)
-          .andBranchIs('main'),
+        codebuild.FilterGroup.inEventOf(codebuild.EventAction.PULL_REQUEST_CREATED),
+        codebuild.FilterGroup.inEventOf(codebuild.EventAction.PULL_REQUEST_UPDATED),
         codebuild.FilterGroup.inEventOf(codebuild.EventAction.PULL_REQUEST_REOPENED)
-          .andBranchIs('main')
       ]
     });
 

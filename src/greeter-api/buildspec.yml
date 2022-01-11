@@ -5,11 +5,11 @@ phases:
     runtime-versions:
       nodejs: 12.x
     commands:
-      - npm install
+      - cd src/greeter-api && npm install
   build:
     commands:
       - echo Build started on `date`
-      - npm test
+      - cd src/greeter-api && npm test
   post_build:
     commands:
       - echo Build completed on `date`
