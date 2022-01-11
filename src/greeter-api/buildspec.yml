@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+    commands:
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - src/**/*
+    - appspec.yml
+  discard-paths: yes
