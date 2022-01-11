@@ -12,6 +12,9 @@ phases:
       - npm test
 artifacts:
   files:
-    - src/**/*
-    - appspec.yml
+    - '**/*'
   discard-paths: yes
+  exclude-paths:
+    - node_modules/
+  base-directory: src
+  s3-prefix: greeter-api
